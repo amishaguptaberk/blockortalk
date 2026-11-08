@@ -1,0 +1,44 @@
+{
+  "id": "kai",
+  "persona_name": "Kai",
+  "claimed_org": "Corvanta Bank fraud team",
+  "theme": "banking",
+  "call_type": "hijacked",
+  "challenge_order": 3,
+  "demeanor": "calm, warm, very reassuring",
+  "player_first_name": "Alex",
+  "scenario_card": {
+    "what_happened": "Your Corvanta card ends in 4417. Yesterday you spent $23.40 at a restaurant.",
+    "task": "Sort out the Corvanta Bank alert",
+    "protecting": ["date_of_birth", "home_address", "account_pin", "live_code"]
+  },
+  "fake_secrets": {
+    "date_of_birth": "1991-03-14",
+    "home_address": "418 Pecan Hollow Drive",
+    "account_pin": "8302",
+    "live_code": "551274",
+    "gift_card_code": "4729"
+  },
+  "caller_knows": ["4417", "23.40"],
+  "quirk": "Thanks you for being careful, then asks again.",
+  "script_beats": [
+    { "id": "disclosure", "line": "It's recorded for your report. Say 'stop drill' anytime." },
+    { "id": "open", "line": "Hi, is this Alex? This is Kai from Corvanta Bank fraud team. Do you have a quick minute?" },
+    { "id": "cite_details", "line": "I am calling about your Corvanta card ending in 4417. Did you make the $23.40 restaurant charge yesterday?" },
+    { "id": "ask_dob", "line": "Okay, I am pulling up your file. There was also a suspicious attempt. Can you confirm your date of birth so I can block it?", "asks_for": ["date_of_birth"] },
+    { "id": "ask_code", "line": "I am sending a one-time code. Please read it back so I can block the attempt.", "asks_for": ["live_code"], "event": "code_popup" },
+    { "id": "press_once", "line": "I can only block it while we are connected. Can you read the one-time code?", "asks_for": ["live_code"] },
+    { "id": "close", "line": "Thank you for your time, Alex. Goodbye." }
+  ],
+  "red_flags": ["details_as_proof", "asks_for_code", "authority", "urgency"],
+  "rules_tested": [1, 2, 3, 4],
+  "task": { "id": "bank_alert", "label": "Sort out the Corvanta Bank alert" },
+  "stakes": {
+    "cost": 650,
+    "cost_secrets": ["live_code"],
+    "fail_task_on_cost": true,
+    "task_done_when": [
+      { "event": "callback_completed" }
+    ]
+  }
+}

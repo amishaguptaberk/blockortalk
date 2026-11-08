@@ -1,0 +1,100 @@
+@font-face { font-family:'Sora'; src:url('/fonts/sora.woff2') format('woff2'); font-weight:100 800; font-display:swap; }
+@font-face { font-family:'DotGothic16'; src:url('/fonts/dot-gothic.woff2') format('woff2'); font-weight:400; font-display:swap; }
+/* Block or Talk visual foundation. Tokens first, then base, then components (ui- prefix). */
+:root {
+  /* colour: neutral only. Purple/red/green appear with their cat, or for kept/broken rules after the reveal. */
+  --bg: #000;
+  --surface: #0d0d0d;
+  --ink: #fff;
+  --ink-muted: #bdbdbd;
+  --line: #575757;
+  --line-strong: #fff;
+  --paper: #eeeae1;
+  --purple: #8b5cf6;
+  --red: #e5484d;
+  --green: #30a46c;
+
+  /* type */
+  --font-ui: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  /* Dot-matrix face. Falls back to a system face if it fails the legibility check. */
+  --font-dot: 'DotGothic16', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --text-body: 18px;
+  --text-small: 14px;
+
+  /* shape + space */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 100px;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+  --focus-ring: 3px solid #fff;
+
+  /* motion */
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --ease-spring: cubic-bezier(.34, 1.2, .64, 1); /* overshoot about 0.2 */
+  --dur-press: 140ms;
+  --dur-toast: 220ms;
+  --dur-sheet: 300ms;
+  --dur-flip: 420ms;
+  --stagger: 60ms;
+}
+
+html { color-scheme: dark; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: var(--text-body)/1.5 var(--font-ui); -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: var(--focus-ring); outline-offset: 4px; }
+
+/* Pill: status chip */
+.ui-pill { display: inline-block; border: 1px solid var(--line); border-radius: var(--radius-pill); padding: var(--space-1) var(--space-3); font-size: var(--text-small); letter-spacing: .04em; color: var(--ink); background: transparent; }
+
+/* Button */
+.ui-button { font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4); min-height: 44px; cursor: pointer; transition: transform var(--dur-press) var(--ease-out), border-color var(--dur-press) var(--ease-out); }
+.ui-button:hover:not(:disabled) { border-color: var(--line-strong); }
+.ui-button:active:not(:disabled) { transform: scale(.97); }
+.ui-button:disabled { cursor: default; color: var(--ink-muted); }
+.ui-button--primary { background: var(--paper); color: #000; border-color: var(--paper); }
+.ui-button--primary:disabled { color: #4a4a4a; }
+.ui-button--large { min-height: 64px; width: 100%; text-align: left; display: block; }
+.ui-button__sub { display: block; color: var(--ink-muted); font-size: 16px; }
+.ui-button--primary .ui-button__sub { color: #3a3a3a; }
+
+/* Card / slip */
+.ui-card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--space-4); }
+.ui-card--strong { border-color: var(--line-strong); border-radius: var(--radius-lg); padding: var(--space-5); }
+
+/* Sprite tile: black field so the frame disappears into the page */
+.ui-sprite-tile { display: inline-block; background: #000; border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--space-2); line-height: 0; }
+.ui-sprite { display: block; image-rendering: crisp-edges; image-rendering: pixelated; }
+
+/* Dot figure: big numbers */
+.ui-dot { font-family: var(--font-dot); font-variant-numeric: tabular-nums; font-size: var(--dot-size, clamp(40px, 5vw, 80px)); line-height: 1.1; letter-spacing: .02em; }
+
+/* Toast: enters at .95 with a fade, never from scale(0) */
+.ui-toast { position: fixed; right: var(--space-5); bottom: var(--space-5); max-width: min(360px, calc(100vw - 32px)); background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--radius-md); padding: var(--space-4); animation: ui-enter var(--dur-toast) var(--ease-out); }
+
+/* Sheet */
+.ui-sheet { color: var(--ink); background: var(--bg); border: 1px solid var(--line-strong); border-radius: var(--radius-lg); padding: var(--space-6); max-width: 560px; width: calc(100% - 32px); }
+.ui-sheet[open] { animation: ui-enter var(--dur-sheet) var(--ease-out); }
+.ui-sheet::backdrop { background: rgb(0 0 0 / .85); }
+
+/* Stamp: small spring */
+.ui-stamp { display: inline-block; border: 2px solid var(--ink); border-radius: var(--radius-sm); padding: var(--space-1) var(--space-3); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; transform: rotate(-4deg); animation: ui-stamp var(--dur-toast) var(--ease-spring); }
+
+/* Reveal flip: rare, so 420ms with 60ms stagger via --i */
+.ui-flip { animation: ui-flip var(--dur-flip) var(--ease-in-out) both; animation-delay: calc(var(--i, 0) * var(--stagger)); }
+
+@keyframes ui-enter { from { opacity: 0; transform: scale(.95); } to { opacity: 1; transform: none; } }
+@keyframes ui-stamp { from { opacity: 0; transform: rotate(-4deg) scale(.95); } to { opacity: 1; transform: rotate(-4deg) scale(1); } }
+@keyframes ui-flip { from { opacity: 0; transform: rotateY(90deg); } to { opacity: 1; transform: none; } }
+@keyframes ui-fade { from { opacity: 0; } to { opacity: 1; } }
+
+.ui-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+/* Reduced motion: fades only */
+@media (prefers-reduced-motion: reduce) {
+  .ui-button { transition: none; }
+  .ui-button:active:not(:disabled) { transform: none; }
+  .ui-toast, .ui-sheet[open], .ui-flip { animation: ui-fade var(--dur-toast) linear both; animation-delay: 0s; }
+  .ui-stamp { animation: ui-fade var(--dur-toast) linear both; }
+}

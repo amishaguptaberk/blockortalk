@@ -1,0 +1,172 @@
+[
+  {
+    "id": "hn-bank-01",
+    "scenario": "fraud alert",
+    "text": "caller: Hello, this is Northline Bank's fraud desk. We declined a card purchase for two hundred dollars at a grocery store a few minutes ago because it did not match your usual stores. receiver: I was not at a grocery store. caller: Then the decline stands and the card is already frozen. A replacement is in the mail to the address on the account. You do not need to tell me anything else. If a letter looks wrong, call the number printed on the back of your card. receiver: Thank you, I will wait for the letter."
+  },
+  {
+    "id": "hn-bank-02",
+    "scenario": "fraud alert",
+    "text": "caller: Harbor Card Services calling with a recorded alert about an ATM withdrawal in another state. We stopped it before any cash left the machine. receiver: That was not me. I am at work. caller: The withdrawal did not go through. The card will not work until you open the app you already have and choose to unlock it there. This call will not ask you to read any numbers. receiver: I will open the app myself. caller: Good. The unlock is only in that app."
+  },
+  {
+    "id": "hn-bank-03",
+    "scenario": "fraud alert",
+    "text": "caller: This is Northline Bank. A gas station charge was declined because of the travel hold you placed last week. receiver: Yes, I set that before the trip and I am home now. caller: The hold is still on, which is why the pump declined. You can clear it in the app under travel plans. Nothing was paid on this call, and the station did not get the money. receiver: I will clear the hold when I get back to the car."
+  },
+  {
+    "id": "hn-bank-04",
+    "scenario": "fraud alert",
+    "text": "caller: Harbor Card Services. A new phone signed into your banking app an hour ago. If that was not you, the session is already signed out. receiver: I bought a phone this morning and signed in. caller: Then no further action is required. The old phone's session ended when the new one connected. We will not text a code and we will not ask you to share one. receiver: That matches what I did."
+  },
+  {
+    "id": "hn-bank-05",
+    "scenario": "fraud alert",
+    "text": "caller: Northline Bank fraud desk. We blocked a card-not-present charge from an electronics site and the pending amount is already released. receiver: I did not shop there. caller: The block stands. You will see the release on tonight's balance, and a letter is going to your statement address. If you want a person later, use the number on the statement, not a number in an email. receiver: I will check the balance tonight."
+  },
+  {
+    "id": "hn-bank-06",
+    "scenario": "payment notice",
+    "text": "caller: This is Northline Bank. Your paycheck deposit posted this morning, a day earlier than usual. receiver: I was worried it would be late. caller: It is in the checking balance now. This is only a notice. No transfer was started on this call. receiver: I can see the reason it felt urgent. Thank you."
+  },
+  {
+    "id": "hn-bank-07",
+    "scenario": "payment notice",
+    "text": "caller: Harbor Card Services. The check you deposited yesterday is on hold until Tuesday, so those funds are not available today. receiver: I was about to pay rent with it. caller: The hold date is Tuesday morning. The rest of the balance is unchanged. We mailed the hold notice to your statement address. receiver: I will use the other funds and wait until Tuesday."
+  },
+  {
+    "id": "hn-bank-08",
+    "scenario": "payment notice",
+    "text": "caller: Northline Bank. Your mortgage payment posted before the due date. receiver: I scheduled it last week and wanted to be sure it left. caller: It left the checking account and the loan shows paid for this month. No extra payment is due. receiver: That is a relief. caller: Keep the confirmation in the app. This call does not change the amount."
+  },
+  {
+    "id": "hn-bank-09",
+    "scenario": "payment notice",
+    "text": "caller: This is Harbor Card Services about a subscription renewal that appears on your card tomorrow. It is the same streaming charge as last month. receiver: I still want that membership. caller: Then you do not need to do anything. We are not taking a payment on this call, and we will not ask you to confirm the card. receiver: Please leave the renewal as it is."
+  },
+  {
+    "id": "hn-bank-10",
+    "scenario": "fraud alert",
+    "text": "caller: Northline Bank. The wire you scheduled yesterday is in review and will not leave until the next business morning. receiver: I did schedule a wire to my own savings at another bank. caller: It is still your scheduled wire. Review does not mean it was cancelled. You can see the status in the app under transfers. If you did not schedule it, cancel it there. receiver: I scheduled it. I will let the review finish."
+  },
+  {
+    "id": "hn-bank-11",
+    "scenario": "card replacement",
+    "text": "caller: Harbor Card Services. Your debit card expires at the end of the month and the new one has shipped. receiver: I have not seen it yet. caller: It was mailed yesterday to the address on the account. The current card works until the printed date. Do not give the new card details to anyone who calls. receiver: I will wait for the envelope."
+  },
+  {
+    "id": "hn-bank-12",
+    "scenario": "branch appointment",
+    "text": "caller: Northline Bank. This is a reminder that your notary appointment is tomorrow at two in the afternoon at the branch you chose. receiver: Yes, I booked that for the house papers. caller: Please bring the unsigned papers and a photo ID. If you miss it, you can rebook in the app. The appointment itself is still on. receiver: I will be there at two."
+  },
+  {
+    "id": "hn-bank-13",
+    "scenario": "payment notice",
+    "text": "caller: This is Northline Bank. The payment you sent to your landlord this morning is complete. receiver: I want to be sure it cannot be pulled back. caller: It has finished. The status in the app says complete, and the amount has left your balance. We cannot reverse it from this call. receiver: That is what I wanted."
+  },
+  {
+    "id": "hn-bank-14",
+    "scenario": "payment notice",
+    "text": "caller: Harbor Card Services. The savings transfer you set for rent posted at six this morning. receiver: I set that so rent would be covered. caller: Checking received the transfer. Your overdraft setting was not used. No fee was charged. receiver: Good. I was watching the balance."
+  },
+  {
+    "id": "hn-bank-15",
+    "scenario": "card replacement",
+    "text": "caller: Northline Bank. The replacement debit card you ordered is at the branch you selected and can be picked up today until six. receiver: I reported the old one missing yesterday. caller: The old card is already off. Bring a photo ID to the teller line. We will not read the new card to you over the phone. receiver: I will stop by after work."
+  },
+  {
+    "id": "hn-bank-16",
+    "scenario": "account notice",
+    "text": "caller: Harbor Card Services. The certificate you hold matures on Friday and the rate for a renewal is in a letter mailed today. receiver: I have not decided whether to renew. caller: You have until Friday. If you do nothing, it renews for the same term at the new rate in that letter. This call does not lock a choice. receiver: I will read the letter before Friday."
+  },
+  {
+    "id": "hn-bank-17",
+    "scenario": "account notice",
+    "text": "caller: Northline Bank. The address change you submitted will take effect on Friday. Until then, mail still goes to the old address. receiver: I moved last weekend and submitted it in the app. caller: That request is the one we have. If you did not submit it, cancel it in the app before Friday. receiver: I did submit it. Thank you for the warning about the mail."
+  },
+  {
+    "id": "hn-bank-18",
+    "scenario": "fraud alert",
+    "text": "caller: This is Northline Bank. You reported a lost card last night, and this call confirms the freeze is on. receiver: Yes, I lost it on the bus. caller: Purchases after the report are being declined. The replacement timeline is the one shown in the app. Nobody needs the old card details. receiver: I already told the app it was lost."
+  },
+  {
+    "id": "hn-bank-19",
+    "scenario": "fraud alert",
+    "text": "caller: Harbor Card Services. Your travel notice is on file through Sunday, so the card is expected to work in the city you listed. receiver: I fly this afternoon and I was afraid the hotel would be declined. caller: The notice covers that city through Sunday. A charge outside it can still be declined. You can edit the dates in the app. receiver: The dates are right."
+  },
+  {
+    "id": "hn-bank-20",
+    "scenario": "payment notice",
+    "text": "caller: Northline Bank. A check written by the other person on your joint account was returned unpaid. The fee is zero because of the account type you already have. receiver: I did not write a check this week. caller: The notice names the other signer. A letter is in the mail. The checking balance was not reduced by a fee. receiver: I will talk with them tonight."
+  },
+  {
+    "id": "hn-bank-21",
+    "scenario": "payment notice",
+    "text": "caller: Harbor Card Services. A merchant refund posted to your card this morning for a shoe order. receiver: I returned those last week. caller: The refund is on the balance now. It can take the store one more day to show the same status. No payment is due back to us. receiver: I will watch the store page, but the card part is done."
+  },
+  {
+    "id": "hn-bank-22",
+    "scenario": "fraud alert",
+    "text": "caller: Northline Bank. We saw a login from a city you have not used before and signed that session out. receiver: I am at home. I did not travel. caller: Then the session should stay closed. Open the app on your own phone and look at recent sign-ins. If only your phone is listed, you are done. We will not ask you to read a text during this call. receiver: I will check the app now."
+  },
+  {
+    "id": "hn-delivery-01",
+    "scenario": "delivery problem",
+    "text": "caller: Parcel Route. We missed your stop today because the building door was locked. We will try again tomorrow at no charge. receiver: I was in meetings. Can you leave it tonight? caller: The truck has already left the area. Tomorrow's attempt is on the tracking page you already have. We will not take a payment to rearrange it. receiver: Tomorrow works."
+  },
+  {
+    "id": "hn-delivery-02",
+    "scenario": "delivery problem",
+    "text": "caller: This is Parcel Route about a weather delay. Your package will not arrive Thursday. The new date is Friday. receiver: I needed it for Thursday night. caller: Friday is the earliest the road delay allows. Tracking will show Friday, and there is no fee for the extra day. receiver: I will change my plans."
+  },
+  {
+    "id": "hn-delivery-03",
+    "scenario": "delivery problem",
+    "text": "caller: Parcel Route. Your parcel is being held at the local counter for pickup during open hours. receiver: Why was it not left at the door? caller: The label required a counter pickup. Bring the pink slip from your mailbox. The counter will match it to the parcel. There is nothing to pay. receiver: I will go tomorrow morning."
+  },
+  {
+    "id": "hn-delivery-04",
+    "scenario": "delivery problem",
+    "text": "caller: Parcel Route. Your package is on the truck for delivery today between noon and six. receiver: I will be home after three. caller: The driver can leave it at the door if no one answers, unless the label says otherwise. You can watch the stop on the tracking page. receiver: The door is fine if I miss them."
+  },
+  {
+    "id": "hn-delivery-05",
+    "scenario": "delivery problem",
+    "text": "caller: Parcel Route. The address on your label is missing an apartment number, so we held the box instead of guessing. receiver: It should be apartment 4B. caller: I can add 4B from what you just said and send it out tomorrow. I do not need any payment or a code from your building. receiver: Please add 4B. That is the only change."
+  },
+  {
+    "id": "hn-delivery-06",
+    "scenario": "delivery problem",
+    "text": "caller: This is Parcel Route. The shipper marked your box as signature required, and nobody was home. We will retry tomorrow evening. receiver: Can a neighbor sign tonight? caller: Not after the truck has returned. Tomorrow evening is the next attempt, and it is already on the tracking page. receiver: I will be home then."
+  },
+  {
+    "id": "hn-delivery-07",
+    "scenario": "delivery problem",
+    "text": "caller: Parcel Route. The driver could not get past the lobby, so the box is in the parcel room rather than being returned. receiver: I did not get a knock. caller: It is logged in the parcel room at your building. The tracking page says held at location. No extra charge applies. receiver: I will pick it up downstairs."
+  },
+  {
+    "id": "hn-carrier-01",
+    "scenario": "service alert",
+    "text": "caller: Fieldline Mobile. Your voice mailbox is nearly full, and new messages may start bouncing tonight. receiver: I have been meaning to clear it. caller: Deleting messages from the phone will stop the bounce. Your service itself is active, and this is not a billing call. receiver: I will delete the old ones after dinner."
+  },
+  {
+    "id": "hn-carrier-02",
+    "scenario": "service alert",
+    "text": "caller: This is Fieldline Mobile. Your bill is due tomorrow and autopay is already scheduled from the method on the account. receiver: I do not want to change anything. caller: Then no action is needed. We are not collecting a payment on this call. The confirmation will show in the account you already use. receiver: Leave autopay as it is."
+  },
+  {
+    "id": "hn-carrier-03",
+    "scenario": "service alert",
+    "text": "caller: Fieldline Mobile network desk. There is an outage on your street. Crews expect service back by six this evening. receiver: My data dropped an hour ago. caller: That matches the outage. Voice and data are affected. You do not need to restart anything for us, and the line is not suspended. receiver: I will wait until six."
+  },
+  {
+    "id": "hn-carrier-04",
+    "scenario": "service alert",
+    "text": "caller: Fieldline Mobile. International roaming that you turned on yesterday is active. Calls abroad will bill at the roaming rate in your plan. receiver: I turn it on only for this trip. caller: It is on. You can switch it off in the phone settings when you land at home. This call does not add a feature. receiver: I wanted it on until Sunday."
+  },
+  {
+    "id": "hn-carrier-05",
+    "scenario": "service alert",
+    "text": "caller: Fieldline Mobile. The SIM change you requested this morning is finished. The previous SIM will not connect. receiver: I moved the service to the new phone. caller: That request is complete. If you still have the old phone, it will show no service, which is expected. We do not need any further confirmation. receiver: The new phone is already online."
+  }
+]

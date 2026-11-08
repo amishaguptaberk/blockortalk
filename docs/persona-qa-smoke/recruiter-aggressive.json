@@ -1,0 +1,21 @@
+{
+  "fingerprint": "1c19d86f4332f75a9aa0cdea09c7138d9c3c553d5064bc28c1a4bc292bd19e1d",
+  "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+  "complete": false,
+  "caller": "recruiter",
+  "receiver": "aggressive",
+  "turns": [
+    {
+      "role": "assistant",
+      "text": "It's recorded for your report. Say 'stop drill' anytime. Hi, is this Alex? This is Yui from Bluebonnet Labs recruiting. Do you have a quick minute?"
+    },
+    {
+      "role": "user",
+      "text": "I'm listening, but make it quick."
+    },
+    {
+      "role": "assistant",
+      "text": "I'll be quick. I'm calling to confirm your interview for the operations analyst role. Is Tuesday at 10 AM still good for you?"
+    }
+  ]
+}

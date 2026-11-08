@@ -1,0 +1,38 @@
+{
+  "id": "james-safe",
+  "persona_id": "james",
+  "mode": "voice",
+  "story": "James knows the card ending and the ShopNest charge. Player refuses the one-time code, hangs up, opens the bank app and taps Call Corvanta, which resolves the alert. Verdict: Unverified.",
+  "verdict": "unverified",
+  "turns": [
+    { "turn": 1, "t": 0, "speaker": "caller", "beat": "disclosure", "text": "It's recorded for your report. Say 'stop drill' anytime." },
+    { "turn": 2, "t": 6, "speaker": "caller", "beat": "open", "text": "Hi, is this Alex? This is James with the Corvanta Bank Fraud Team, calling about a charge on your card." },
+    { "turn": 3, "t": 12, "speaker": "player", "text": "Okay. What charge?" },
+    { "turn": 4, "t": 14, "speaker": "caller", "beat": "cite_details", "text": "Your card ending in 4471. We're seeing $86.12 at ShopNest yesterday, and a second attempt we blocked. Your case number is CV-77104, could you repeat that back for me?" },
+    { "turn": 5, "t": 26, "speaker": "player", "text": "CV-77104. What happens now?" },
+    { "turn": 6, "t": 29, "speaker": "caller", "beat": "ask_code", "text": "To stop the next charge I'll send a one-time code to your phone. Read it back to me and I'll lock the card right now." },
+    { "turn": 7, "t": 38, "speaker": "player", "text": "I don't read codes to anyone who calls me. I'll call Corvanta on the number in my app." },
+    { "turn": 8, "t": 44, "speaker": "caller", "beat": "press_once", "text": "I understand, and I appreciate you being careful, but I'm the fraud team, I already have your card details. If we don't verify in the next two minutes, the charge goes through." },
+    { "turn": 9, "t": 54, "speaker": "player", "text": "Then I'll call the number I have. Goodbye." }
+  ],
+  "events": [
+    { "type": "code_popup", "after_turn": 6, "t": 33 },
+    { "type": "hangup", "by": "player", "after_turn": 9, "t": 56 },
+    { "type": "bank_app_opened", "after_turn": 9, "t": 61 },
+    { "type": "callback_completed", "after_turn": 9, "t": 95 }
+  ],
+  "expected": {
+    "rules": {
+      "1": { "status": "kept", "turn": 7 },
+      "2": { "status": "kept", "turn": 7 },
+      "3": { "status": "kept", "turn": 7 },
+      "4": { "status": "kept", "turn": 9 }
+    },
+    "leaked": [],
+    "money_lost": 0,
+    "task": "done",
+    "moves": ["probe@3", "probe@5", "protect@7", "protect@9", "disconnect@9", "verify@9", "verify@9"],
+    "rewind_turn": 7,
+    "rewind_cost_you": false
+  }
+}

@@ -1,0 +1,4 @@
+import { insightsHandlers } from '../../../../lib/insights/server';
+
+export const dynamic = 'force-dynamic';
+export function GET(request: Request) { return insightsHandlers().CSV(request); }

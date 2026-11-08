@@ -1,0 +1,3 @@
+# Carrier insights show totals only, never Player records
+
+T-Mobile sees only totals by Category × Tactic × outcome. Any group with fewer than five Players is hidden, and emails, nicknames, transcripts and per-Player rows never leave Tell. The Insights analyst reads those totals, not transcripts. We rejected sending each Player's anonymized analysis, because single records can be re-identified ("the one 70+ player in Plano who fell for the IRS call"), and that promise is hard to walk back once data has been shared. Until real totals clear the threshold, the demo uses rows marked as synthetic behind a "Synthetic demo data" label, never shown as real.

@@ -1,0 +1,14 @@
+export type Personality = 'planner' | 'detector' | 'debrief';
+export type Animation = 'idle' | 'talking' | 'excited' | 'thinking' | 'typing';
+export type Folder = 'idle' | 'talk_standard' | 'talk_excited' | 'talk_thinking' | 'talk_typing';
+export const mascotDirectory: Record<Personality, 'purple' | 'red' | 'green'>;
+export const frameCount: Record<Folder, number>;
+export const animationFolder: Record<Animation, Folder>;
+export const FRAME_MS: number;
+export const IDLE_LOOPS: number;
+export const SPRITE_WIDTH: number;
+export const SPRITE_HEIGHT: number;
+export function spriteFrame(personality: Personality, animation: Folder, frame: number): string;
+export function spriteFrames(personality: Personality, animation: Folder): string[];
+export function frameAt(animation: Folder, tick: number, options?: { active?: boolean; animate?: boolean }): number;
+export function isSettled(animation: Folder, tick: number, options?: { active?: boolean; animate?: boolean }): boolean;

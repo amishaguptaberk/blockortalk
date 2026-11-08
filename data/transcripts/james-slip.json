@@ -1,0 +1,37 @@
+{
+  "id": "james-slip",
+  "persona_id": "james",
+  "mode": "voice",
+  "story": "James knows the card ending and the ShopNest charge. The one-time code pops up and the player reads it aloud. Costs $650 and fails the bank task.",
+  "verdict": "real",
+  "turns": [
+    { "turn": 1, "t": 0, "speaker": "caller", "beat": "disclosure", "text": "It's recorded for your report. Say 'stop drill' anytime." },
+    { "turn": 2, "t": 6, "speaker": "caller", "beat": "open", "text": "Hi, is this Alex? This is James with the Corvanta Bank Fraud Team, calling about a charge on your card." },
+    { "turn": 3, "t": 12, "speaker": "player", "text": "Oh no. Which charge?" },
+    { "turn": 4, "t": 14, "speaker": "caller", "beat": "cite_details", "text": "Your card ending in 4471. We're seeing $86.12 at ShopNest yesterday, and a second attempt we blocked. Your case number is CV-77104, could you repeat that back for me?" },
+    { "turn": 5, "t": 26, "speaker": "player", "text": "CV-77104. Yes, ending 4471, that's my card." },
+    { "turn": 6, "t": 31, "speaker": "caller", "beat": "ask_code", "text": "To stop the next charge I'll send a one-time code to your phone. Read it back to me and I'll lock the card right now." },
+    { "turn": 7, "t": 40, "speaker": "player", "text": "Okay, I got a text. Hang on." },
+    { "turn": 8, "t": 43, "speaker": "caller", "beat": "press_once", "text": "Take your time. Actually, quickly please, the charge is still pending. Just read me the six digits." },
+    { "turn": 9, "t": 49, "speaker": "player", "text": "It's three one eight, nine oh two." },
+    { "turn": 10, "t": 53, "speaker": "caller", "beat": "close", "text": "Perfect, that's verified. Your card is secured. Have a great day." }
+  ],
+  "events": [
+    { "type": "code_popup", "after_turn": 6, "t": 35 },
+    { "type": "hangup", "by": "caller", "after_turn": 10, "t": 56 }
+  ],
+  "expected": {
+    "rules": {
+      "1": { "status": "broken", "turn": 9 },
+      "2": { "status": "broken", "turn": 9 },
+      "3": { "status": "broken", "turn": 9 },
+      "4": { "status": "broken", "turn": 9 }
+    },
+    "leaked": ["live_code"],
+    "money_lost": 650,
+    "task": "failed",
+    "moves": ["probe@3"],
+    "rewind_turn": 9,
+    "rewind_cost_you": true
+  }
+}

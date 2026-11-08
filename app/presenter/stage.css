@@ -1,0 +1,30 @@
+.stage-slide h1 { font-size: clamp(44px, 6vw, 88px); font-weight: 500; letter-spacing: -.04em; line-height: 1.1; margin: 0 0 32px; }
+.stage-slide > .presenter-eyebrow { margin-top: 32px; }
+
+.stage-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 24px; }
+.stage-pair figure { margin: 0; border: 1px solid var(--line); border-radius: var(--radius-md); padding: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; }
+.stage-pair figcaption { grid-column: 1 / -1; font-size: clamp(20px, 2.2vw, 28px); }
+.stage-pair p { margin: 0; line-height: 1.1; }
+.stage-pair small { color: var(--ink-muted); font-size: 16px; }
+.stage-number { font-family: var(--font-dot); font-variant-numeric: tabular-nums; font-size: clamp(56px, 7vw, 104px); }
+.stage-pair div:first-of-type .stage-number { color: var(--red); }
+.stage-missing { display: inline-block; font-size: clamp(20px, 2.2vw, 28px); color: var(--ink-muted); padding: 16px 0; }
+
+.stage-takeaway { font-size: clamp(22px, 2.4vw, 32px); margin: 32px 0; max-width: 40ch; }
+.stage-table { width: 100%; border-collapse: collapse; font-size: 18px; font-variant-numeric: tabular-nums; }
+.stage-table th, .stage-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+.stage-table thead th { color: var(--ink-muted); font-weight: 400; font-size: 16px; }
+.stage-honesty { margin: 28px 0 4px; font-size: 20px; }
+.stage-source { color: var(--ink-muted); font-size: 14px; margin: 0; }
+
+.stage-clip { margin: 32px 0 0; }
+.stage-clip-frame { position: relative; border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; background: var(--surface); aspect-ratio: 16 / 9; }
+.stage-clip-frame video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
+.stage-clip-missing { margin: 0; padding: 48px; font-size: 22px; color: var(--ink-muted); }
+.stage-recorded { position: absolute; top: 20px; left: 20px; background: #000; color: var(--ink); border: 1px solid var(--line-strong); border-radius: var(--radius-pill); padding: 6px 18px; font-size: clamp(18px, 2vw, 26px); letter-spacing: .12em; text-transform: uppercase; pointer-events: none; }
+.stage-clip figcaption { color: var(--ink-muted); margin-top: 12px; font-size: 18px; }
+
+@media (max-width: 600px) {
+  .stage-table { font-size: 15px; display: block; overflow-x: auto; }
+  .stage-pair figure { grid-template-columns: 1fr; }
+}

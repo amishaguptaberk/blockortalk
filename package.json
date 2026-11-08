@@ -1,0 +1,70 @@
+{
+  "name": "blockortalk",
+  "version": "1.0.0",
+  "description": "*Every scam has a tell.*",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "persona:qa": "node --env-file=.env.local --import tsx scripts/persona-qa.ts",
+    "dev": "vite dev",
+    "build": "vite build",
+    "start": "vite preview",
+    "deploy": "vinext-cloudflare deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs && vitest run",
+    "detect:eval": "python -m detection.evaluate",
+    "migrate": "node --env-file=.env.local scripts/migrate.mjs",
+    "insights:seed": "node --env-file=.env.local --import tsx scripts/seed-insights.ts",
+    "insights:unseed": "node --env-file=.env.local --import tsx scripts/seed-insights.ts --remove",
+    "test:voice": "vitest run tests/voice",
+    "voice:provision": "tsx scripts/provision-voice-agents.ts",
+    "practice:index": "node --env-file=.env.local scripts/practice-index.mjs",
+    "voice:connect-data": "node --env-file=.env.local --import tsx scripts/provision-voice-agents.ts --with-dataset",
+    "practice:evaluate": "node --env-file=.env.local scripts/practice-index.mjs --evaluate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamarthaB10/BlockorTalk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/SamarthaB10/BlockorTalk/issues"
+  },
+  "homepage": "https://github.com/SamarthaB10/BlockorTalk#readme",
+  "dependencies": {
+    "@elevenlabs/client": "1.35.0",
+    "@elevenlabs/elevenlabs-js": "2.77.0",
+    "@vinext/cloudflare": "latest",
+    "next": "^16.4.5",
+    "pg": "^8.23.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-server-dom-webpack": "latest",
+    "vinext": "latest",
+    "three": "0.160.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "beta",
+    "@types/node": "latest",
+    "@types/pg": "^8.23.1",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "@vitejs/plugin-rsc": "latest",
+    "cf": "latest",
+    "tsx": "4.23.15",
+    "typescript": "latest",
+    "vite": "^8.3.6",
+    "vitest": "3.2.7",
+    "@types/three": "0.160.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}

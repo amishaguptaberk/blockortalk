@@ -1,0 +1,14 @@
+{
+  "train": [
+    {"text": "alpha unique dialogue about a gift card", "label": 1}
+  ],
+  "synthetic_test": [
+    {"text": "  Alpha   unique dialogue about a gift card  ", "label": 1, "y_pred": 1}
+  ],
+  "real_calls": [
+    {"text": "a different robocall transcript", "label": 1, "y_pred": 1}
+  ],
+  "hard_negatives": [
+    {"text": "your card was declined at the grocery", "label": 0, "y_pred": 0}
+  ]
+}

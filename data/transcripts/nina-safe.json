@@ -1,0 +1,37 @@
+{
+  "id": "nina-safe",
+  "persona_id": "nina",
+  "mode": "text",
+  "story": "Player asks who's calling, checks the Bluebonnet portal mid-call, confirms the slot and says Real.",
+  "verdict": "real",
+  "turns": [
+    { "turn": 1, "t": 0, "speaker": "caller", "beat": "disclosure", "text": "It's recorded for your report. Say 'stop drill' anytime." },
+    { "turn": 2, "t": 6, "speaker": "caller", "beat": "open", "text": "Hi, is this Alex? This is Nina with Bluebonnet Labs Recruiting, calling about your application." },
+    { "turn": 3, "t": 11, "speaker": "player", "text": "Yes, this is Alex. Which role is this about?" },
+    { "turn": 4, "t": 14, "speaker": "caller", "beat": "confirm_slot", "text": "The Junior Data Analyst role. Sorry, one sec, the calendar is thinking about it again... there we go. We'd like to confirm your interview for Tuesday at 10:30 AM." },
+    { "turn": 5, "t": 22, "speaker": "player", "text": "How do I know this is really Bluebonnet?" },
+    { "turn": 6, "t": 25, "speaker": "caller", "beat": "portal_pointer", "text": "Totally fair question. Everything's already in your candidate portal, the booking is there. I don't need anything from you." },
+    { "turn": 7, "t": 38, "speaker": "player", "text": "Okay, I see it in the portal. Tuesday at 10:30 works for me." },
+    { "turn": 8, "t": 42, "speaker": "caller", "beat": "interview_details", "text": "Great. It's a 45-minute video interview with the analytics team. The link will be in the portal." },
+    { "turn": 9, "t": 48, "speaker": "player", "text": "Perfect, thanks Nina." },
+    { "turn": 10, "t": 50, "speaker": "caller", "beat": "close", "text": "Thanks, Alex. Good luck on Tuesday!" }
+  ],
+  "events": [
+    { "type": "portal_opened", "after_turn": 6, "t": 30 },
+    { "type": "hangup", "by": "caller", "after_turn": 10, "t": 53 }
+  ],
+  "expected": {
+    "rules": {
+      "1": { "status": "not_tested" },
+      "2": { "status": "not_tested" },
+      "3": { "status": "not_tested" },
+      "4": { "status": "kept", "turn": 6 }
+    },
+    "leaked": [],
+    "money_lost": 0,
+    "task": "done",
+    "moves": ["probe@3", "probe@5", "verify@6"],
+    "rewind_turn": 6,
+    "rewind_cost_you": false
+  }
+}

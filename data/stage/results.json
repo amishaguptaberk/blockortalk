@@ -1,0 +1,11 @@
+{
+  "measuredOn": "2026-11-07",
+  "source": "docs/DETECTION_RESULTS.md (issue #7). Nemotron rows stay null until the full comparison finishes.",
+  "realCalls": { "n": 859 },
+  "hardNegatives": { "n": 44 },
+  "detectors": {
+    "baseline": { "syntheticF1": 1.0, "realCallDetectionRate": 0.0489, "hardNegativeFalseAlarmRate": 0.0, "medianDetectionSeconds": 0.0007 },
+    "nemotron": { "syntheticF1": null, "realCallDetectionRate": null, "hardNegativeFalseAlarmRate": null, "medianDetectionSeconds": null },
+    "retrieval": { "syntheticF1": null, "realCallDetectionRate": null, "hardNegativeFalseAlarmRate": null, "medianDetectionSeconds": null }
+  }
+}

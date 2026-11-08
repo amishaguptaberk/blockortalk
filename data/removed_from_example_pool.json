@@ -1,0 +1,6 @@
+{
+  "note": "BothBosu/scam-dialogue ships this reward dialogue in the train split and the test split. It is removed from the example pool and kept in the test split. Any other overlap fails the evaluation.",
+  "normalized_texts": [
+    "caller: hello, is this mrs. johnson? receiver: yes, it is. who's calling? caller: my name is karen and i'm calling from customer service. how are you today? receiver: i'm fine, thanks. what's this about? caller: we've been trying to reach you because you've been selected to receive a $500 gift card from one of our major retailers. receiver: really? i didn't enter any contest or sweepstakes. caller: no, ma'am, this is a random selection. you've been chosen from a pool of our valued customers. receiver: that sounds too good to be true. what do i need to do to get it? caller: all you need to do is provide me with some information to verify your identity. receiver: what kind of information? caller: just your name, address, and credit card number to process the gift card. receiver: i'm not comfortable giving out my credit card number. caller: i completely understand, ma'am. but this is a legitimate offer and we need that information to prevent fraud. receiver: i don't think so. i'm going to hang up now. caller: wait, ma'am! if you don't take advantage of this offer, it will be gone forever!"
+  ]
+}

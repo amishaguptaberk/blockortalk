@@ -1,0 +1,24 @@
+{
+  "id": "corvanta-callback",
+  "persona_name": "Corvanta Support",
+  "claimed_org": "Corvanta Bank",
+  "theme": "banking",
+  "call_type": "legit",
+  "role": "Verify path for James's call. Opened by tapping \"Call Corvanta\" in the fictional bank app (SPEC: Challenge mode, verification surfaces). Not one of the three calls.",
+  "demeanor": "calm, plain, unhurried",
+  "player_first_name": "Alex",
+  "fake_secrets": {},
+  "caller_knows": ["4471", "86.12", "ShopNest"],
+  "quirk": "Mild realism only: a short hold-music apology before picking up.",
+  "script_beats": [
+    { "id": "disclosure", "line": "It's recorded for your report. Say 'stop drill' anytime." },
+    { "id": "open", "line": "Thanks for calling Corvanta Bank, sorry for the hold music. How can I help?" },
+    { "id": "confirm_no_alert", "line": "I'm looking at your card ending 4471. The ShopNest charge for $86.12 is yours. Nobody from Corvanta called you today, and we didn't send you a code." },
+    { "id": "reassure", "line": "We'll never call and ask you to read back a code. If someone did, you did the right thing hanging up." },
+    { "id": "close", "line": "Your alert is resolved. Anything else I can help with?" }
+  ],
+  "red_flags": [],
+  "rules_tested": [],
+  "task": { "id": "bank_alert", "label": "Sort out the Corvanta Bank alert" },
+  "stakes": { "cost": 0, "cost_secrets": [], "fail_task_on_cost": false, "task_done_when": [] }
+}

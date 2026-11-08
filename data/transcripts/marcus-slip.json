@@ -1,0 +1,36 @@
+{
+  "id": "marcus-slip",
+  "persona_id": "marcus",
+  "mode": "voice",
+  "story": "Player gives date of birth and address, then reads the gift-card code aloud (spoken digits). Costs $350.",
+  "verdict": "real",
+  "turns": [
+    { "turn": 1, "t": 0, "speaker": "caller", "beat": "disclosure", "text": "It's recorded for your report. Say 'stop drill' anytime." },
+    { "turn": 2, "t": 6, "speaker": "caller", "beat": "open", "text": "Hi, is this Alex? This is Marcus with Bluebonnet Labs Onboarding, calling about your new-hire setup." },
+    { "turn": 3, "t": 11, "speaker": "player", "text": "Oh great! What do you need from me?" },
+    { "turn": 4, "t": 14, "speaker": "caller", "beat": "verify_identity", "text": "Welcome to the Bluebonnet family! For the Junior Data Analyst role we ship equipment early. First I just need to confirm your date of birth and home address." },
+    { "turn": 5, "t": 23, "speaker": "player", "text": "Sure, it's July twenty-second, nineteen ninety-four. And I'm at twenty-seven sixteen Mesquite Bend Lane in Richardson." },
+    { "turn": 6, "t": 32, "speaker": "caller", "beat": "equipment_deposit", "text": "Perfect, family! Last step: your laptop kit needs a $350 refundable equipment deposit, and the shipping slot releases at 5 PM today." },
+    { "turn": 7, "t": 40, "speaker": "player", "text": "Oh, okay. How do I pay that?" },
+    { "turn": 8, "t": 43, "speaker": "caller", "beat": "odd_payment", "text": "Easiest is a gift card. Got one handy? Read me the code on the back and you're all set. The whole Bluebonnet family is cheering for you!" },
+    { "turn": 9, "t": 51, "speaker": "player", "text": "I actually have a ShopNest card. It's four eight two nine, three one five six, seven seven two zero." },
+    { "turn": 10, "t": 60, "speaker": "caller", "beat": "close", "text": "You're officially onboarded. Welcome aboard, Alex!" }
+  ],
+  "events": [
+    { "type": "hangup", "by": "caller", "after_turn": 10, "t": 63 }
+  ],
+  "expected": {
+    "rules": {
+      "1": { "status": "broken", "turn": 5 },
+      "2": { "status": "broken", "turn": 9 },
+      "3": { "status": "broken", "turn": 5 },
+      "4": { "status": "broken", "turn": 5 }
+    },
+    "leaked": ["date_of_birth", "home_address", "gift_card_code"],
+    "money_lost": 350,
+    "task": null,
+    "moves": ["probe@3", "probe@7"],
+    "rewind_turn": 9,
+    "rewind_cost_you": true
+  }
+}

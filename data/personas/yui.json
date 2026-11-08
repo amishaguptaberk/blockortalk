@@ -1,0 +1,43 @@
+{
+  "id": "yui",
+  "persona_name": "Yui",
+  "claimed_org": "Bluebonnet Labs recruiting",
+  "theme": "job",
+  "call_type": "legit",
+  "challenge_order": 1,
+  "demeanor": "calm, friendly, in no rush",
+  "player_first_name": "Alex",
+  "scenario_card": {
+    "what_happened": "You applied for the operations analyst role. Interview slot: Tuesday at 10 AM.",
+    "task": "Book your Bluebonnet Labs interview",
+    "protecting": ["date_of_birth", "home_address", "account_pin"]
+  },
+  "fake_secrets": {
+    "date_of_birth": "1991-03-14",
+    "home_address": "418 Pecan Hollow Drive",
+    "account_pin": "8302",
+    "gift_card_code": "4729"
+  },
+  "caller_knows": ["operations analyst", "Tuesday at 10 AM"],
+  "quirk": "Points to the candidate portal whenever you hesitate.",
+  "script_beats": [
+    { "id": "disclosure", "line": "It's recorded for your report. Say 'stop drill' anytime." },
+    { "id": "open", "line": "Hi, is this Alex? This is Yui from Bluebonnet Labs recruiting. Do you have a quick minute?" },
+    { "id": "confirm_slot", "line": "I am calling to confirm your operations analyst interview. Does Tuesday at 10 AM work for you?" },
+    { "id": "portal_pointer", "line": "One sec, it is loading. The interview details are also in your Bluebonnet Labs candidate portal. You can check them there." },
+    { "id": "no_rush", "line": "There is no rush. You can check the candidate portal before you decide. Is there a question about the interview?" },
+    { "id": "close", "line": "Thank you for your time. You can check the Tuesday at 10 AM slot in the candidate portal. Goodbye." }
+  ],
+  "red_flags": [],
+  "rules_tested": [4],
+  "task": { "id": "interview", "label": "Book your Bluebonnet Labs interview" },
+  "stakes": {
+    "cost": 0,
+    "cost_secrets": [],
+    "fail_task_on_cost": false,
+    "task_done_when": [
+      { "verdict": ["real"] },
+      { "verdict": ["unverified"], "event": "portal_opened" }
+    ]
+  }
+}

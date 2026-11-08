@@ -1,0 +1,24 @@
+{
+  "train": [
+    {"text": "the officer demands a wire transfer and says the case number is urgent", "label": 1},
+    {"text": "the officer demands a wire transfer before the warrant is filed", "label": 1},
+    {"text": "pay the fee with a gift card or the officer will suspend the file", "label": 1},
+    {"text": "the officer demands a wire transfer from the gift card kiosk", "label": 1},
+    {"text": "parcel route will deliver the box tomorrow and no payment is due", "label": 0},
+    {"text": "the branch appointment is tomorrow and no payment is due", "label": 0},
+    {"text": "autopay is already scheduled and no payment is due on this call", "label": 0},
+    {"text": "the replacement card is in the mail and no payment is due", "label": 0}
+  ],
+  "synthetic_test": [
+    {"text": "the officer demands a wire transfer right now", "label": 1},
+    {"text": "the branch appointment is tomorrow and no payment is due today", "label": 0}
+  ],
+  "real_calls": [
+    {"text": "the officer demands a wire transfer or the gift card offer expires", "label": 1},
+    {"text": "pay the fee with a gift card before the officer closes the case", "label": 1}
+  ],
+  "hard_negatives": [
+    {"text": "parcel route will deliver tomorrow and no payment is due at the door", "label": 0},
+    {"text": "autopay is already scheduled and no payment is due this evening", "label": 0}
+  ]
+}

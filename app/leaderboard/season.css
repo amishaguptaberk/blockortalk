@@ -1,0 +1,80 @@
+.season-page { max-width: 1040px; margin: auto; padding: var(--space-5); }
+.season-page a { color: var(--ink); text-underline-offset: 4px; }
+.season-page header { padding-block: var(--space-6) var(--space-5); }
+.season-eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin: 0; color: var(--ink-muted); }
+.season-page h1 { font-family: Sora, var(--font-ui); font-weight: 500; letter-spacing: -.035em; font-size: clamp(40px, 6vw, 72px); line-height: 1.08; margin: var(--space-4) 0; max-width: 720px; }
+.season-page h2 { font-size: 24px; margin: 0; }
+.season-summary { display: grid; grid-template-columns: 1.35fr .85fr; gap: var(--space-4); }
+.season-summary > div { min-width: 0; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--space-5); }
+.season-countdown { margin: var(--space-4) 0; }
+.season-summary ol { margin: var(--space-4) 0; padding-left: 0; list-style: none; }
+.season-summary li { padding-block: var(--space-2); }
+.season-summary p:last-child { color: var(--ink-muted); }
+.standings-prize-place { display: inline-block; min-width: 2.75rem; font-variant-numeric: tabular-nums; }
+.season-notice { padding: var(--space-4); border: 1px solid var(--line); border-radius: var(--radius-md); }
+
+.standings-you { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--space-5); align-items: center; position: sticky; top: 0; z-index: 2; margin-block: var(--space-5); padding: var(--space-5); background: var(--bg); border: 1px solid var(--line-strong); border-radius: var(--radius-lg); }
+.standings-you > div { min-width: 0; }
+.standings-you p { margin: 0; }
+.standings-kicker { color: var(--ink-muted); font-size: 16px; }
+.standings-you-score { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin: var(--space-2) 0; font-size: 22px; }
+.standings-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-4); }
+.standings-actions a { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; max-width: 100%; text-align: center; text-decoration: none; white-space: normal; }
+
+.standings-podium { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); align-items: end; margin: var(--space-6) 0; padding: 0; list-style: none; }
+.standings-podium[data-count="1"] { grid-template-columns: minmax(0, 420px); justify-content: center; }
+.standings-podium[data-count="2"] { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); }
+.standings-step { display: flex; flex-direction: column; gap: var(--space-2); min-height: 220px; margin: 0; padding: var(--space-5); background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-lg); animation: standings-in var(--dur-toast) var(--ease-out) both; animation-delay: calc(var(--i, 0) * var(--stagger)); }
+.standings-step--first { min-height: 280px; background: var(--paper); color: #000; border-color: var(--paper); }
+.standings-place { margin: 0; font-family: var(--font-dot); font-variant-numeric: tabular-nums; font-size: clamp(40px, 6vw, 72px); line-height: 1; }
+.standings-you .standings-place { font-size: clamp(48px, 8vw, 80px); }
+.standings-name { margin: 0; font-family: Sora, var(--font-ui); font-weight: 500; letter-spacing: -.03em; font-size: clamp(22px, 3vw, 32px); line-height: 1.15; overflow-wrap: anywhere; }
+.standings-score { margin: 0; font-size: 20px; }
+.standings-prize { margin: 0; color: var(--ink-muted); }
+.standings-step--first .blokbuks,
+.standings-step--first .standings-name,
+.standings-step--first .standings-prize { color: #000; }
+.standings-step--first .standings-prize { color: #3a3a3a; }
+.standings-meter { display: block; height: 4px; margin-top: var(--space-3); background: rgb(255 255 255 / .18); border-radius: var(--radius-pill); overflow: hidden; }
+.standings-meter > span { display: block; height: 100%; width: 100%; background: var(--ink); transform-origin: left center; }
+.standings-step--first .standings-meter { background: rgb(0 0 0 / .12); }
+.standings-step--first .standings-meter > span { background: #000; }
+
+.standings-move { display: inline-block; margin-left: var(--space-2); padding: 2px var(--space-2); border: 1px solid var(--line); border-radius: var(--radius-pill); font-size: 16px; font-weight: 400; line-height: 1.4; white-space: nowrap; }
+.standings-you-score .standings-move { margin-left: 0; }
+
+.season-page table { width: 100%; border-collapse: collapse; margin-top: var(--space-5); }
+.season-page th, .season-page td { border-bottom: 1px solid var(--line); padding: var(--space-4) var(--space-2); text-align: left; }
+.season-page td:last-child, .season-page th:last-child { text-align: right; white-space: nowrap; }
+.season-page tbody th { overflow-wrap: anywhere; font-weight: 400; }
+.standings-rank { width: 5rem; font-variant-numeric: tabular-nums; font-weight: 600; }
+.standings-row--you th, .standings-row--you td { background: var(--paper); color: #000; }
+.standings-row--you .blokbuks { color: #000; }
+.standings-row--you .standings-move { border-color: #000; color: #000; }
+
+.season-claim { max-width: 560px; display: grid; gap: var(--space-4); margin-top: var(--space-5); }
+.season-claim input[type=email] { box-sizing: border-box; width: 100%; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); padding: var(--space-3); border-radius: var(--radius-sm); }
+.season-claim input[type=checkbox] { width: 24px; height: 24px; vertical-align: middle; margin-right: var(--space-2); }
+.season-claim label { min-height: 44px; }
+
+@keyframes standings-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+@media (hover: hover) and (pointer: fine) {
+  .standings-table tbody tr:not(.standings-row--you):hover th,
+  .standings-table tbody tr:not(.standings-row--you):hover td { background: var(--surface); }
+}
+
+@media (max-width: 640px) {
+  .season-summary, .standings-podium, .standings-podium[data-count="1"], .standings-podium[data-count="2"] { grid-template-columns: 1fr; }
+  .season-page { padding: var(--space-4); }
+  .standings-you { position: static; grid-template-columns: 1fr; }
+  .standings-actions { display: grid; }
+  .standings-actions a { width: 100%; }
+  .standings-step, .standings-step--first { min-height: 0; }
+  .standings-step--first { order: -1; }
+  .season-page th, .season-page td { padding: var(--space-3) var(--space-1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .standings-step { animation: ui-fade var(--dur-toast) linear both; animation-delay: 0s; }
+}

@@ -1,0 +1,13 @@
+.voice-stage .orb-instrument { position:relative; width:200px; height:200px; margin:8px auto 28px; display:grid; place-items:center; }
+.voice-stage .orb-orbit { display:none; }
+.voice-stage .voice-orb { position:relative; width:122px; height:122px; margin:0; padding:1px; border-radius:50%; background:linear-gradient(140deg,#e3d5ff,#7762b9 40%,#242137 75%,#b6a8ee); box-shadow:0 0 48px #9070d31c; isolation:isolate; }
+.voice-stage .voice-orb span { display:block; width:100%; height:100%; border-radius:inherit; position:relative; overflow:hidden; background:radial-gradient(ellipse at 28% 23%,#e3d8ffb3 0%,transparent 30%),radial-gradient(ellipse at 72% 70%,#9e74f080,transparent 42%),radial-gradient(ellipse at 38% 38%,#a88adc,#55407e 40%,#201c36 72%,#0c0e17 100%); box-shadow:inset 0 1px 8px #e8d9ff70,inset -14px -18px 28px #060810c9; }
+.voice-stage .voice-orb span::before { content:''; position:absolute; inset:-45%; border-radius:46%; background:radial-gradient(ellipse at 35% 32%,#e5d4ffdb,transparent 29%),radial-gradient(ellipse at 68% 60%,#a66decde,transparent 36%),radial-gradient(ellipse at 30% 75%,#786bdfb3,transparent 32%); filter:blur(8px); animation:orb-flow 12s linear infinite; animation-play-state:var(--orb-play,running); }
+.voice-stage .voice-orb span::after { content:''; position:absolute; inset:-25%; border-radius:50%; background:radial-gradient(ellipse at 65% 30%,#eddaff80,transparent 30%),radial-gradient(ellipse at 30% 65%,#bda6f099,transparent 30%); filter:blur(10px); mix-blend-mode:screen; animation:orb-flow 9s linear infinite reverse; animation-play-state:var(--orb-play,running); }
+.voice-stage .voice-orb[data-live="true"] { box-shadow:0 0 55px #9c76df35; }
+.voice-stage:has([data-live="true"]) .orb-orbit { animation:orb-orbit-turn 32s linear infinite; }
+.voice-stage>p { letter-spacing:-.015em; }.voice-stage>span { letter-spacing:.025em; }
+@keyframes orb-orbit-turn { to { transform:rotate(360deg); } }
+@keyframes orb-flow { from { transform:rotate(0deg) translate(3%,2%); } to { transform:rotate(360deg) translate(3%,2%); } }
+@media(max-width:640px) { .voice-stage .orb-instrument { width:170px; height:170px; }.voice-stage .voice-orb { width:106px; height:106px; } }
+@media(prefers-reduced-motion:reduce) { .voice-stage .orb-orbit,.voice-stage .voice-orb span::before,.voice-stage .voice-orb span::after { animation:none!important; }.voice-stage .voice-orb { transform:none; transition:none; } }

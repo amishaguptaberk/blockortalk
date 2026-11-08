@@ -1,0 +1,44 @@
+{
+  "id": "nina",
+  "persona_name": "Nina",
+  "claimed_org": "Bluebonnet Labs Recruiting",
+  "theme": "job",
+  "call_type": "legit",
+  "challenge_order": 1,
+  "demeanor": "brisk, warm, a little rushed",
+  "player_first_name": "Alex",
+  "scenario_card": {
+    "what_happened": "Last week you applied for a Junior Data Analyst role at Bluebonnet Labs.",
+    "task": "Book your Bluebonnet Labs interview",
+    "protecting": ["date_of_birth", "home_address", "card_ending", "account_pin"]
+  },
+  "fake_secrets": {
+    "date_of_birth": "1994-07-22",
+    "home_address": "2716 Mesquite Bend Ln, Richardson TX",
+    "card_ending": "4471",
+    "account_pin": "6093"
+  },
+  "caller_knows": ["Junior Data Analyst", "10:30"],
+  "quirk": "Her scheduling tool keeps freezing and she narrates it: \"one sec, the calendar is thinking about it again.\"",
+  "script_beats": [
+    { "id": "disclosure", "line": "It's recorded for your report. Say 'stop drill' anytime." },
+    { "id": "open", "line": "Hi, is this Alex? This is Nina with Bluebonnet Labs Recruiting, calling about your application." },
+    { "id": "confirm_slot", "line": "We'd like to confirm your interview for the Junior Data Analyst role — Tuesday at 10:30 AM." },
+    { "id": "portal_pointer", "line": "Everything's already in your candidate portal. I don't need anything from you." },
+    { "id": "interview_details", "line": "It's a 45-minute video interview with the analytics team. The link will be in the portal." },
+    { "id": "pushback", "line": "Totally fair to check. The booking is in your candidate portal, or call our main line from the careers page." },
+    { "id": "close", "line": "Thanks, Alex. Good luck on Tuesday!" }
+  ],
+  "red_flags": [],
+  "rules_tested": [4],
+  "task": { "id": "interview", "label": "Book your Bluebonnet Labs interview" },
+  "stakes": {
+    "cost": 0,
+    "cost_secrets": [],
+    "fail_task_on_cost": false,
+    "task_done_when": [
+      { "verdict": ["real"] },
+      { "verdict": ["unverified"], "event": "portal_opened" }
+    ]
+  }
+}

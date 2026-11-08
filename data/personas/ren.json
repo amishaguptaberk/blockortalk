@@ -1,0 +1,41 @@
+{
+  "id": "ren",
+  "persona_name": "Ren",
+  "claimed_org": "Bluebonnet Labs onboarding",
+  "theme": "job",
+  "call_type": "scam",
+  "challenge_order": 2,
+  "demeanor": "upbeat, salesy, gets louder when pushed",
+  "player_first_name": "Alex",
+  "scenario_card": {
+    "what_happened": "You bought a $350 gift card for a birthday. You have not paid Bluebonnet Labs anything.",
+    "task": "Keep your $1,000",
+    "protecting": ["date_of_birth", "home_address", "account_pin", "gift_card_code"]
+  },
+  "fake_secrets": {
+    "date_of_birth": "1991-03-14",
+    "home_address": "418 Pecan Hollow Drive",
+    "account_pin": "8302",
+    "gift_card_code": "4729"
+  },
+  "caller_knows": ["operations analyst"],
+  "quirk": "Keeps saying everyone does it this way.",
+  "script_beats": [
+    { "id": "disclosure", "line": "It's recorded for your report. Say 'stop drill' anytime." },
+    { "id": "open", "line": "Hi, is this Alex? This is Ren from Bluebonnet Labs onboarding. Do you have a quick minute?" },
+    { "id": "verify_identity", "line": "Congratulations on moving forward for the operations analyst role. Can you confirm your date of birth and home address for the equipment shipment?", "asks_for": ["date_of_birth", "home_address"] },
+    { "id": "equipment_deposit", "line": "We need a refundable $350 equipment deposit before the interview. Payroll is not set up, so we take a gift card. Totally standard, everyone does it." },
+    { "id": "odd_payment", "line": "Read the code on the back of your gift card so we can lock the equipment list today. The swag pack is great.", "asks_for": ["gift_card_code"] },
+    { "id": "press_once", "line": "It is refunded on your first paycheck. Can you read that gift-card code?", "asks_for": ["gift_card_code"] },
+    { "id": "close", "line": "Thank you for your time, Alex. Goodbye." }
+  ],
+  "red_flags": ["asks_for_secret", "odd_payment", "reward", "urgency"],
+  "rules_tested": [1, 2, 4],
+  "task": null,
+  "stakes": {
+    "cost": 350,
+    "cost_secrets": ["gift_card_code"],
+    "fail_task_on_cost": false,
+    "task_done_when": []
+  }
+}

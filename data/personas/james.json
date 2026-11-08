@@ -1,0 +1,43 @@
+{
+  "id": "james",
+  "persona_name": "James",
+  "claimed_org": "Corvanta Bank Fraud Team",
+  "theme": "banking",
+  "call_type": "hijacked",
+  "challenge_order": 3,
+  "demeanor": "calm, warm, very reassuring",
+  "player_first_name": "Alex",
+  "scenario_card": {
+    "what_happened": "Yesterday you spent $86.12 at ShopNest on your Corvanta card ending 4471. This morning the Corvanta app showed a \"review recent activity\" alert.",
+    "task": "Sort out the Corvanta Bank alert",
+    "protecting": ["date_of_birth", "home_address", "account_pin", "live_code"]
+  },
+  "fake_secrets": {
+    "date_of_birth": "1994-07-22",
+    "home_address": "2716 Mesquite Bend Ln, Richardson TX",
+    "card_ending": "4471",
+    "account_pin": "6093",
+    "live_code": "318 902"
+  },
+  "caller_knows": ["4471", "86.12", "ShopNest"],
+  "quirk": "Reads out long case reference numbers and asks you to repeat them back, \"for your protection\".",
+  "script_beats": [
+    { "id": "disclosure", "line": "It's recorded for your report. Say 'stop drill' anytime." },
+    { "id": "open", "line": "Hi, is this Alex? This is James with the Corvanta Bank Fraud Team, calling about a charge on your card." },
+    { "id": "cite_details", "line": "Your card ending in 4471 — we're seeing $86.12 at ShopNest yesterday, and a second attempt we blocked. Your case number is CV-77104, could you repeat that back for me?" },
+    { "id": "ask_code", "line": "To stop the next charge I'll send a one-time code to your phone. Read it back to me and I'll lock the card right now.", "asks_for": ["live_code"], "event": "code_popup" },
+    { "id": "press_once", "line": "I understand, and I appreciate you being careful — but I'm the fraud team, I already have your card details. If we don't verify in the next two minutes, the charge goes through.", "asks_for": ["live_code"] },
+    { "id": "close", "line": "Perfect, that's verified. Your card is secured. Have a great day." }
+  ],
+  "red_flags": ["details_as_proof", "asks_for_code", "urgency", "authority"],
+  "rules_tested": [1, 2, 3, 4],
+  "task": { "id": "bank_alert", "label": "Sort out the Corvanta Bank alert" },
+  "stakes": {
+    "cost": 650,
+    "cost_secrets": ["live_code"],
+    "fail_task_on_cost": true,
+    "task_done_when": [
+      { "event": "callback_completed" }
+    ]
+  }
+}

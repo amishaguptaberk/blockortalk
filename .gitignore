@@ -1,0 +1,25 @@
+# secrets
+.env
+.env*.local
+tiger-cloud-*.txt
+tiger-cloud-*.env
+
+# Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# vinext
+/dist/
+.vinext/
+.cloudflare/
+
+.dev.vars*
+
+# detection datasets downloaded by python -m detection.evaluate
+data/cache/
+__pycache__/
+*.pyc
+.venv/

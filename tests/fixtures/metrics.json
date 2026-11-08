@@ -1,0 +1,24 @@
+{
+  "train": [
+    {"text": "a paid invoice with nothing else owed", "label": 0},
+    {"text": "a fake refund demand for a gift card", "label": 1}
+  ],
+  "synthetic_test": [
+    {"text": "synthetic scam one", "label": 1, "y_pred": 1},
+    {"text": "synthetic scam two", "label": 1, "y_pred": 1},
+    {"text": "synthetic legit one", "label": 0, "y_pred": 0},
+    {"text": "synthetic legit two", "label": 0, "y_pred": 1}
+  ],
+  "real_calls": [
+    {"text": "real scam transcript one", "label": 1, "y_pred": 1},
+    {"text": "real scam transcript two", "label": 1, "y_pred": 1},
+    {"text": "real scam transcript three", "label": 1, "y_pred": 0},
+    {"text": "real scam transcript four", "label": 1, "y_pred": 1}
+  ],
+  "hard_negatives": [
+    {"text": "urgent legit fraud alert one", "label": 0, "y_pred": 0},
+    {"text": "urgent legit fraud alert two", "label": 0, "y_pred": 1},
+    {"text": "urgent legit delivery problem", "label": 0, "y_pred": 0},
+    {"text": "urgent legit carrier notice", "label": 0, "y_pred": 0}
+  ]
+}
